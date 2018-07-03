@@ -15,6 +15,7 @@ import javax.swing.tree.TreePath;
 import javax.swing.tree.TreeSelectionModel;
 import java.awt.*;
 import java.awt.dnd.DnDConstants;
+import java.awt.dnd.DragSource;
 import java.awt.dnd.DropTarget;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -55,7 +56,7 @@ import jadx.gui.utils.Utils;
 
 import static javax.swing.KeyStroke.getKeyStroke;
 
-@SuppressWarnings("serial")
+@SuppressWarnings({"serial"})
 public class MainWindow extends JFrame {
 	private static final Logger LOG = LoggerFactory.getLogger(MainWindow.class);
 
@@ -543,6 +544,7 @@ public class MainWindow extends JFrame {
 	}
 
 	private void initUI() {
+		System.out.println("MainWindow - initUi");
 		mainPanel = new JPanel(new BorderLayout());
 		JSplitPane splitPane = new JSplitPane();
 		splitPane.setResizeWeight(SPLIT_PANE_RESIZE_WEIGHT);
